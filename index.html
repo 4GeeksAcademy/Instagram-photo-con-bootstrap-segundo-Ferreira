@@ -8,31 +8,111 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
+
     <nav class="navbar bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand"><i class="fa-brands fa-instagram"></i>Instagram</a>
-          <div class="d-flex">
-          <button type="button" class="btn btn-success d-flex">Create a new post</button>
-          <div class="btn-group dropstart ms-2">
-            <button type="button" class="btn btn-secondary"><i class="fa-regular fa-gear"></i></i></button>
-            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
-              <span class="visually-hidden">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Accesibility</a></li>
-              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Log out</a></li>
-            </ul>
+          <a class="navbar-brand"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <div class="d-flex dropstart ms-2">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal"> Create a new post</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Caption:</label>
+                        <textarea class="form-control" id="message-text">Add the caption of your post here</textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="d-flex m-2 px-3 gap-2">
+                    <i class="fa-solid fa-camera"></i>
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-group dropstart ms-2">
+              <button type="button" class="btn btn-secondary"><i class="fa-regular fa-gear"></i></button>
+              <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Log out</a></li>
+              </ul>
+            </div>
+          </div> 
+        </div> 
+      </nav>  
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+            <i class="fas fa-th fa-1x mx-2"></i>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+            <i class="fas fa-list fa-1x mx-2"></i>
+          </button>
+        </li>
+      </ul>
+     <div class="container-fluid d-flex justify-content-center">
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+          <div class="row cols-3 g-3">
+            <div class="col-4 ">
+              <img src="https://www.publimetro.com.mx/resizer/v2/YB6ANIDML5FEXL4B464BXTD4RM.jpg?auth=499bd7ad5129a15841b6af46c6dc8e9340bf587c5d2f22e5dca1019f5fa79564&width=1440&height=959" alt="messi levantando la copa" class="img-fluid">
+            </div>
+            <div class="col-4 ">
+              <img src="https://www.publimetro.com.mx/resizer/v2/ZF2WVZP6LRFH7DCQKUYGEGP3YE.jpg?auth=5382be33604d45d42c1386857723fe4231532eddc8c5f2090975ea253e16db93&width=1440&height=905" alt="la seleccion festejando" class="img-fluid">
+            </div>
+            <div class="col-4 ">
+              <img src="https://www.publimetro.com.mx/resizer/v2/ZF2WVZP6LRFH7DCQKUYGEGP3YE.jpg?auth=5382be33604d45d42c1386857723fe4231532eddc8c5f2090975ea253e16db93&width=1440&height=905" alt="la seleccion festejando" class="img-fluid">
+            </div>
+            <div class="col-4 ">
+              <img src="https://www.publimetro.com.mx/resizer/v2/ZF2WVZP6LRFH7DCQKUYGEGP3YE.jpg?auth=5382be33604d45d42c1386857723fe4231532eddc8c5f2090975ea253e16db93&width=1440&height=905" alt="la seleccion festejando" class="img-fluid">
+            </div>
+            <div class="col-4 ">
+              <img src="https://www.publimetro.com.mx/resizer/v2/ZF2WVZP6LRFH7DCQKUYGEGP3YE.jpg?auth=5382be33604d45d42c1386857723fe4231532eddc8c5f2090975ea253e16db93&width=1440&height=905" alt="la seleccion festejando" class="img-fluid">
+            </div>
+            <div class="col-4 ">
+              <img src="https://www.publimetro.com.mx/resizer/v2/ZF2WVZP6LRFH7DCQKUYGEGP3YE.jpg?auth=5382be33604d45d42c1386857723fe4231532eddc8c5f2090975ea253e16db93&width=1440&height=905" alt="la seleccion festejando" class="img-fluid">
+            </div>
+            <div class="col-4 ">
+              <img src="https://www.publimetro.com.mx/resizer/v2/ZF2WVZP6LRFH7DCQKUYGEGP3YE.jpg?auth=5382be33604d45d42c1386857723fe4231532eddc8c5f2090975ea253e16db93&width=1440&height=905" alt="la seleccion festejando" class="img-fluid">
+            </div>
+            <div class="col-4 ">
+              <img src="https://www.publimetro.com.mx/resizer/v2/ZF2WVZP6LRFH7DCQKUYGEGP3YE.jpg?auth=5382be33604d45d42c1386857723fe4231532eddc8c5f2090975ea253e16db93&width=1440&height=905" alt="la seleccion festejando" class="img-fluid">
+            </div>
+            <div class="col-4 ">
+              <img src="https://www.publimetro.com.mx/resizer/v2/ZF2WVZP6LRFH7DCQKUYGEGP3YE.jpg?auth=5382be33604d45d42c1386857723fe4231532eddc8c5f2090975ea253e16db93&width=1440&height=905" alt="la seleccion festejando" class="img-fluid">
+            </div>
+
           </div>
         </div>
+  
+        <!-- Contenido de la pestaña Profile -->
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+          <p>Contenido del Feed</p>
         </div>
-      </nav>
+      </div>
+    </div>
+    
+      
+      
 
-   
-        
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
